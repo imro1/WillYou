@@ -178,20 +178,31 @@ img {
 
       <p id="can">Will You Be the EVO to my Lancer?</p>
 
-      <p id="noo">Why you choosing No bebe :(</p>
+      <p id="noo">Why you choosing No bebe</p>
       
+      <button id="play" style="
+        position: fixed;
+        top: 20px; 
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #94418c;
+
+  color: white;
+
+      ">Click Here</button>
+
       <button id="yes">Yes</button>
 
       <button id="no">No</button>
     </div>
 
-    <audio id="yesSound">
-      <source src="assets/YESsound.mp3" type="audio/mpeg">
+    <audio id="background">
+      <source src="assets/background.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
 
-    <audio autoplay id="background">
-      <source src="assets/background.mp3" type="audio/mpeg">
+    <audio id="yesSound">
+      <source src="assets/YESsound.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
  
@@ -212,10 +223,18 @@ img {
 
       const noo = document.getElementById("noo");
 
+      const play = document.getElementById("play");
+
+      play.addEventListener("click", () => {
+        background.play();
+      })
+
       noBtn.addEventListener("click", () => {
         yesBtn.style.width = `${yesBtn.offsetWidth + 40}px`;
 
         yesBtn.style.height = `${yesBtn.offsetHeight + 40}px`;
+
+        play.style.display ="none";
 
         noo.style.display = "block";
       });
@@ -234,6 +253,7 @@ img {
         yesBtn.style.display = "none";
         noBtn.style.display = "none";
 
+        play.style.display ="none";
         noo.style.display = "none";
 
         yesSound.play();
