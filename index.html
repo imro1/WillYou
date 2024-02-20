@@ -1,186 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>For Jhena</title>
-  </head>
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Jhena</title>
+</head>
 
-  </head>
+<head>
+  <meta charset="UTF-8" />
 
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-* {
-  padding: 0;
+  <link rel="stylesheet" type="text/css" href="style/styles.css" />
+</head>
 
-  margin: 0;
+<body>
+  <div class="containar">
+    <img id="yay1" src="assets/YES.gif" />
 
-  box-sizing: border-box;
+    <img id="yay2" src="assets/dancing.gif" />
 
-  transition: 0.4s ease-in-out;
-}
+    <p id="yay">Can't wait to see you my love, and can't wait to spend the rest of my life with you babylovely.</p>
 
-body {
-  font-family: Rubik, sans-serif;
-  background: #ffe4ef;
+    <img id="can1" src="assets/pinkEvo.png" />
 
-  width: 100%;
+    <p id="can">Will You Be the EVO to my Lancer?</p>
 
-  height: 100vh;
+    <p id="noo">Why you choosing No bebe</p>
 
-  -webkit-tap-highlight-color: transparent;
-
-  transition: 0.4s ease-in-out;
-}
-
-button {
-  margin: 10px;
-
-  height: 50px;
-
-  width: 70px;
-
-  font-size: 16px;
-
-  border: none;
-
-  border-radius: 10px;
-
-  cursor: pointer;
-
-  transition: 0.4s ease-in-out;
-}
-
-#yes:active {
-  background: #632d5d;
-}
-
-#no:active {
-  background: #310e25;
-}
-
-.containar {
-  width: 100%;
-
-  height: 100vh;
-
-  justify-content: center;
-
-  display: flex;
-
-  align-items: center;
-}
-
-#yes {
-  margin-top: 25px;
-
-  background-color: #94418c;
-
-  color: white;
-  
-}
-
-#no {
-  margin-top: 25px;
-
-  background-color: #4b1639;
-
-  color: white;
-}
-
-#yay {
-  display: none;
-
-  position: absolute;
-
-  margin-top: 50px;
-
-  font-weight: 900;
-
-  font-size: 20px;
-}
-
-#noo {
-  display: none;
-
-  position: absolute;
-
-  margin-top: 300px;
-
-  font-weight: 900;
-
-  font-size: 20px;
-}
-
-#yay1 {
-  display: none;
-
-  width: 300px;
-
-  position: absolute;
-
-  margin-top: -250px;
-}
-
-#yay2 {
-  display: none;
-
-  width: 150px;
-
-  position: absolute;
-
-  margin-top: 320px;
-}
-
-#can1 {
-  width: 300px;
-
-  position: absolute;
-
-  margin-top: -300px;
-
-  display: block;
-}
-
-#can {
-  position: absolute;
-
-  margin-top: -80px;
-
-  font-weight: 600;
-
-  display: block;
-}
-
-img:active {
-  transform: scale3d(1.2, 1.2, 1.2);
-}
-
-img {
-  transition: 0.4s ease-in-out;
-}
-
-  </style>
-  <body>
-    <div class="containar">
-      <img id="yay1" src="assets/YES.gif" />
-
-      <img id="yay2" src="assets/dancing.gif" />
-
-      <p id="yay">Can't wait to see you my love, and can't wait to spend the rest of my life with you babylovely.</p>
-
-      <img id="can1" src="assets/pinkEvo.png" />
-
-      <p id="can">Will You Be the EVO to my Lancer?</p>
-
-      <p id="noo">Why you choosing No bebe</p>
-      
-      <button id="play" style="
+    <button id="play" style="
         position: fixed;
         top: 20px; 
         left: 50%;
@@ -191,74 +40,94 @@ img {
 
       ">Click Here</button>
 
-      <button id="yes">Yes</button>
+    <button id="yes">Yes</button>
 
-      <button id="no">No</button>
-    </div>
+    <button id="no">No</button>
+  </div>
 
-    <audio id="background">
-      <source src="assets/background.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+  <audio id="background">
+    <source src="assets/background.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-    <audio id="yesSound">
-      <source src="assets/YESsound.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
- 
-    <script>
-      const yesBtn = document.getElementById("yes");
+  <audio id="yesSound">
+    <source src="assets/YESsound.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-      const noBtn = document.getElementById("no");
+  <script>
+    const password = prompt("Please enter the password:");
+    const correctPassword = "yourpassword"; 
 
-      const yayText = document.getElementById("yay");
+    function promptPassword() {
+      var password = prompt("Enter the password:");
+      if (password === "vico") {
+        return true; 
+      } else {
+        alert("Incorrect password!");
+        window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"; // Redirect to another page if password is incorrect
+        return false; 
+      }
+    }
 
-      const yayText1 = document.getElementById("yay1");
+    // Call the promptPassword function when the page loads
+    window.onload = function() {
+      promptPassword();
+    };
 
-      const yayText2 = document.getElementById("yay2");
+    const yesBtn = document.getElementById("yes");
 
-      const can1 = document.getElementById("can1");
+    const noBtn = document.getElementById("no");
 
-      const can = document.getElementById("can");
+    const yayText = document.getElementById("yay");
 
-      const noo = document.getElementById("noo");
+    const yayText1 = document.getElementById("yay1");
 
-      const play = document.getElementById("play");
+    const yayText2 = document.getElementById("yay2");
 
-      play.addEventListener("click", () => {
-        background.play();
-      })
+    const can1 = document.getElementById("can1");
 
-      noBtn.addEventListener("click", () => {
-        yesBtn.style.width = `${yesBtn.offsetWidth + 40}px`;
+    const can = document.getElementById("can");
 
-        yesBtn.style.height = `${yesBtn.offsetHeight + 40}px`;
+    const noo = document.getElementById("noo");
 
-        play.style.display ="none";
+    const play = document.getElementById("play");
 
-        noo.style.display = "block";
-      });
+    play.addEventListener("click", () => {
+      background.play();
+    })
 
-      yesBtn.addEventListener("click", () => {
-        yayText.style.display = "block";
+    noBtn.addEventListener("click", () => {
+      yesBtn.style.width = `${yesBtn.offsetWidth + 40}px`;
 
-        yayText1.style.display = "block";
+      yesBtn.style.height = `${yesBtn.offsetHeight + 40}px`;
 
-        yayText2.style.display = "block";
+      play.style.display = "none";
 
-        can.style.display = "none";
+      noo.style.display = "block";
+    });
 
-        can1.style.display = "none";
+    yesBtn.addEventListener("click", () => {
+      yayText.style.display = "block";
 
-        yesBtn.style.display = "none";
-        noBtn.style.display = "none";
+      yayText1.style.display = "block";
 
-        play.style.display ="none";
-        noo.style.display = "none";
+      yayText2.style.display = "block";
 
-        yesSound.play();
-        background.pause();
-      });
-    </script>
-  </body>
+      can.style.display = "none";
+
+      can1.style.display = "none";
+
+      yesBtn.style.display = "none";
+      noBtn.style.display = "none";
+
+      play.style.display = "none";
+      noo.style.display = "none";
+
+      yesSound.play();
+      background.pause();
+    });
+  </script>
+</body>
+
 </html>
